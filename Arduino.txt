@@ -1,0 +1,21 @@
+#include <Servo.h>
+
+Servo myservo;  // create servo object to control a servo
+
+void setup() {
+  myservo.attach(11);  // attaches the servo on pin 9 to the servo object
+}
+
+void loop() {
+  for(int n=0; n<180; n++)
+  {
+    myservo.write(n);
+    delay(50);  
+  }
+   for(int n=180; n>0; n--)
+  {
+    myservo.write(n);
+    delay(50);  
+  }
+  
+}
